@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-execute-command"
+version = "0.1.0"
+description = "An MCP server for executing commands across platforms"
+readme = "README.md"
+authors = [
+    { name = "Claude Assistant", email = "claude@anthropic.com" },
+]
+license = "MIT"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "asyncio>=3.4.3",
+    "aiohttp>=3.11.8",
+    "platformdirs>=4.3.6",
+    "psutil>=6.1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/modelcontextprotocol/mcp-execute-command"
+"Bug Tracker" = "https://github.com/modelcontextprotocol/mcp-execute-command/issues"
+
+[tool.black]
+target-version = ["py38"]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
